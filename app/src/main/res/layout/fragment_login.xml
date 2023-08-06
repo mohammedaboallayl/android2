@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Login">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textSize="37dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="27dp"
+                android:textColor="#000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logo"
+                android:inputType="phone"/>
+
+
+            <TextView
+                android:id="@+id/descriptionTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_personal_perfoile"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/login"
+                app:layout_constraintStart_toStartOf="@id/login"
+                />
+
+            <TextView
+                android:id="@+id/phoneNumTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/descriptionTxt"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/email"
+                android:textColor="@color/black"
+
+                />
+
+            <EditText
+                android:id="@+id/m1phoneNumEd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/phoneNumTxt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="27dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/edittextshape"
+                android:hint="@string/email"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                />
+
+            <TextView
+                android:id="@+id/passwordTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/m1phoneNumEd"
+                app:layout_constraintStart_toStartOf="@id/phoneNumTxt"
+                android:layout_marginTop="7dp"
+                android:text="@string/password"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/m1passEd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/passwordTxt"
+                app:layout_constraintStart_toStartOf="@id/m1phoneNumEd"
+                android:background="@drawable/edittextshape"
+                app:layout_constraintEnd_toEndOf="@id/m1phoneNumEd"
+                android:padding="10dp"
+                android:hint="@string/password"
+                android:layout_marginTop="7dp"
+                android:inputType="textPassword"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/m1loginBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/m1passEd"
+                android:layout_marginTop="47dp"
+                android:layout_marginHorizontal="44dp"
+                android:background="@drawable/buttonshape"
+                android:textColor="@color/white"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                />
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dont_have"
+                app:layout_constraintTop_toBottomOf="@id/m1loginBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="47dp"
+                android:layout_marginStart="30dp"
+                android:textColor="#91919f"/>
+
+            <TextView
+                android:id="@+id/m1signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="47dp"
+                android:text="@string/signup"
+                android:textColor="@color/bluetext"
+                app:layout_constraintStart_toEndOf="@id/account"
+                app:layout_constraintTop_toBottomOf="@id/m1loginBtn" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

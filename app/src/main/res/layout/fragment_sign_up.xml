@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignUp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/m2logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/main"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_ico"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/m2logo"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="47dp"
+                android:layout_marginStart="27dp"/>
+            <TextView
+                android:id="@+id/m2login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/signup"
+                android:textColor="#000"
+                android:textSize="37dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/m2logo" />
+
+
+            <TextView
+                android:id="@+id/m2descriptionTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="7dp"
+                android:text="@string/create_personal_profile"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/m2login"
+                app:layout_constraintTop_toBottomOf="@id/m2login" />
+
+            <TextView
+                android:id="@+id/m2phoneNumTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/phone_number"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/m2descriptionTxt" />
+
+            <EditText
+                android:id="@+id/m2phoneNumEd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="27dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/edittextshape"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/m2phoneNumTxt" />
+
+            <TextView
+                android:id="@+id/m2emailT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/m2phoneNumEd" />
+
+            <EditText
+                android:id="@+id/m2emailET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="27dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/edittextshape"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/m2emailT" />
+            <TextView
+                android:id="@+id/m2cityT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/city"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/m2emailET" />
+
+            <EditText
+                android:id="@+id/m2cityET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="27dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/edittextshape"
+                android:hint="@string/city"
+                android:inputType="text"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/m2cityT" />
+
+            <TextView
+                android:id="@+id/m2passwordTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/password"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/m2phoneNumTxt"
+                app:layout_constraintTop_toBottomOf="@id/m2cityET" />
+
+            <EditText
+                android:id="@+id/m2passEd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/edittextshape"
+                android:drawableEnd="@drawable/ic_show"
+                android:hint="@string/password"
+                android:padding="10dp"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@id/m2phoneNumEd"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/m2phoneNumEd"
+                app:layout_constraintTop_toBottomOf="@id/m2passwordTxt" />
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="17dp"
+                app:layout_constraintStart_toStartOf="@id/m2passEd"
+                app:layout_constraintTop_toBottomOf="@id/m2passEd"
+                />
+
+            <TextView
+                android:id="@+id/agreeloging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="@string/by_signingup"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox"
+                app:layout_constraintTop_toBottomOf="@id/m2passEd"
+
+                />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="@string/Terms_of"
+                android:textColor="@color/bluetext"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/agreeloging"
+                app:layout_constraintTop_toBottomOf="@id/m2passEd"
+
+                />
+
+            <TextView
+                android:id="@+id/service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/serviceandpolicy"
+                android:textColor="@color/bluetext"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/agreeloging"
+                app:layout_constraintTop_toBottomOf="@id/agreeloging"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/m2signupBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="44dp"
+                android:layout_marginTop="47dp"
+                android:background="@drawable/buttonshape"
+                android:text="@string/signup"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/service" />
+
+            <TextView
+                android:id="@+id/m2account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/haveaccount"
+                android:textColor="#91919f"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/m2signupBtn" />
+
+            <TextView
+                android:id="@+id/m2loginET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/login"
+                android:textColor="@color/bluetext"
+                app:layout_constraintStart_toEndOf="@id/m2account"
+                app:layout_constraintTop_toBottomOf="@id/m2signupBtn"
+                />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@id/m2loginET"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

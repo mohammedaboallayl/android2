@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigator"
+    app:startDestination="@id/starter">
+
+    <fragment
+        android:id="@+id/starter"
+        android:name="com.example.myapplication.Starter"
+        android:label="fragment_starter"
+        tools:layout="@layout/fragment_starter" >
+        <action
+            android:id="@+id/action_starter_to_signUp"
+            app:destination="@id/signUp" />
+        <action
+            android:id="@+id/action_starter_to_commingSoonReciqule"
+            app:destination="@id/commingSoonReciqule" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.example.myapplication.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_commingSoonReciqule"
+            app:destination="@id/commingSoonReciqule" />
+        <action
+            android:id="@+id/action_signUp_to_login2"
+            app:destination="@id/login2" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.myapplication.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/commingSoonReciqule"
+        android:name="com.example.myapplication.CommingSoonReciqule"
+        android:label="fragment_comming_soon_reciqule"
+        tools:layout="@layout/fragment_comming_soon_reciqule" />
+    <fragment
+        android:id="@+id/login2"
+        android:name="com.example.myapplication.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login2_to_commingSoonReciqule"
+            app:destination="@id/commingSoonReciqule" />
+        <action
+            android:id="@+id/action_login2_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
+</navigation>
